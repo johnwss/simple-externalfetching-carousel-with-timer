@@ -1,12 +1,16 @@
 //fetch("https://picsum.photos/v2/list?limit=3")
 //https://testapi.io/api/johnny/fotos
-fetch("http://localhost:3000/fotos")
+//https://fancy-rugby-shirt-bull.cyclic.app
+//http://localhost:3000/fotos
+fetch("https://fancy-rugby-shirt-bull.cyclic.app")
 .then(response => response.json())
 .then(data => {
+console.log(data.fotos.img.length);
+console.log(data.fotos.img);
 var novoarr = []; 
-for(i = 0; i < data.img.length; i++)
+for(i = 0; i < data.fotos.img.length; i++)
 {
-  novoarr.push(data.img[i])
+  novoarr.push(data.fotos.img[i])
 };
 
 for(i = 0; i < novoarr.length; i++){
@@ -26,7 +30,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 500); // Change image every 2 seconds
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
 }
 
 })
