@@ -38,7 +38,7 @@ function showSlides() {
 function refresh() {    
   setTimeout(function () {
       location.reload()
-  }, 100);
+  }, 10000);
 }
 
 refresh();
