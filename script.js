@@ -36,7 +36,8 @@ function showSlides() {
   setTimeout(showSlides, time); // Change image every 2 seconds
 };
 
-function refresh() {    
+function refresh() {
+  let slides = document.getElementsByClassName("fts");    
   setTimeout(function () {
       location.reload()
   }, slides.length * time);
