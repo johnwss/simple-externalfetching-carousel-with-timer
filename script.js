@@ -2,6 +2,9 @@
 //https://testapi.io/api/johnny/fotos
 //https://fancy-rugby-shirt-bull.cyclic.app
 //http://localhost:3000/fotos
+
+const time = 2000;
+
 fetch("https://fancy-rugby-shirt-bull.cyclic.app")
 .then(response => response.json())
 .then(data => {
@@ -30,15 +33,16 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
-})
+  setTimeout(showSlides, time); // Change image every 2 seconds
+};
 
 function refresh() {    
   setTimeout(function () {
       location.reload()
-  }, 10000);
+  }, slides.length * time);
 }
 
 refresh();
+
+})
+
