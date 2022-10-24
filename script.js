@@ -35,4 +35,10 @@ function showSlides() {
 
 })
 
-setTimeout(location.reload(), 10000);
+function refresh() {    
+  setTimeout(function () {
+      location.reload()
+  }, 100);
+}
+
+refresh();
