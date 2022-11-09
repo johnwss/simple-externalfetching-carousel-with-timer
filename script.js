@@ -3,7 +3,7 @@
 //https://fancy-rugby-shirt-bull.cyclic.app
 //http://localhost:3000/fotos
 
-const time = 2000;
+const time = 8000;
 
 fetch("https://fancy-rugby-shirt-bull.cyclic.app")
 .then(response => response.json())
